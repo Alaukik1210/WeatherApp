@@ -1,3 +1,5 @@
+import drizzle from "./images/drizzle.png";
+import clearsky from "./images/clear.png";
 const apiKey = "4c8c834a5fa599cdc534b8cca2b15d60";
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=`;
 
@@ -29,10 +31,10 @@ async function checkweather(city){
         weatherIcon.src = "images/rain.png"
     }
     else if(data.weather[0].main == "Clear"){
-        weatherIcon.src = "images/clear.png"
+        weatherIcon.src = clearsky
     }
     else if(data.weather[0].main == "Haze"){
-        weatherIcon.src = "images/drizzle.png"
+        weatherIcon.src = drizzle
     }
     else if(data.weather[0].main == "Mist"){
         weatherIcon.src = "images/mist.png"
